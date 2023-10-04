@@ -5,17 +5,16 @@
 .banner {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 100%;
     padding: toRem(10) toRem(10);
-    // gap: toRem(20);
-    flex-wrap: wrap;
+    gap: toRem(20);
 
     @include breakpoint-above(xs) {
-        gap: toRem(30);
+        gap: toRem(40);
     }
 
-    @include breakpoint-above(lg) {
+    @include breakpoint-above(md) {
         gap: toRem(50);
     }
 
@@ -25,8 +24,8 @@
         height: toRem(100);
 
         @include breakpoint-above(sm) {
-            height: toRem(120);
-            width: toRem(120);
+            height: toRem(130);
+            width: toRem(130);
         }
 
         img {
@@ -54,12 +53,7 @@
         @include breakpoint-above(sm) {
             font-size: toRem(30);
             line-height: toRem(45);
-            max-width: toRem(400);
-        }
-        
-        @include breakpoint-above(md) {
-            font-size: toRem(30);
-            line-height: toRem(40);
+            max-width: toRem(500);
         }
 
         &__title {
@@ -68,6 +62,7 @@
 
         &__subtitle {
             font-size: toRem(15);
+            line-height: toRem(20);
 
             @include breakpoint-above(xs) {
                 font-size: toRem(18);
@@ -75,14 +70,6 @@
             }
 
             @include breakpoint-above(sm) {
-                font-size: toRem(20);
-            }
-
-            @include breakpoint-above(md) {
-                font-size: toRem(35);
-            }
-
-            @include breakpoint-above(md) {
                 font-size: toRem(20);
             }
         } 

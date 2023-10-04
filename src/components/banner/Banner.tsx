@@ -17,7 +17,7 @@ const Banner: React.FC = () => {
                     Frontend Developer 
                 </div> 
                 <div className="banner__header__subtitle">
-                    with passion for aesthetic and functional web design
+                    with passion for aesthetic and&nbsp;functional web design
                 </div>  
             </div>
         </div>
