@@ -16,6 +16,10 @@
     height: toRem(200);
     display: flex;
     justify-content: center;
+
+    &--mobile {
+      box-shadow: inset 0px 0px 20px 0px $color_secondary;
+    }
   }
 
   &__main {

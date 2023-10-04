@@ -7,7 +7,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     color: $color_light;
     font-size: toRem(25);
     line-height: toRem(40);
@@ -62,15 +61,23 @@
         font-size: toRem(20);
         line-height: toRem(35);
 
+        &--highlight {
+            color: $color_primary;
+        }
+
+        &--link {
+            color: $color_light;
+            cursor: pointer;
+
+            &:hover {
+                color: $color_primary;
+            }
+        }
+
         @include breakpoint-above(xs) {
             font-size: toRem(25);
             line-height: toRem(40);
         }
-
-        @include breakpoint-above(sm) {
-            font-size: toRem(30);
-            line-height: toRem(45);
-        } 
 
         @include breakpoint-above(md) {
             font-size: toRem(20);

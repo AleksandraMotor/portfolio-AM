@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { isDesktop } from 'react-device-detect';
+import { isDesktop, isMobile } from 'react-device-detect';
 import Home from '../pages/home/Home';
 import Skills from '../pages/skills/Skills';
 import Projects from '../pages/projects/Projects';
@@ -14,7 +14,10 @@ import './App.scss';
 const App: React.FunctionComponent = () => {
   return (
     <div className="app">
-      <div className="app__banner">
+      <div className={classNames({
+        'app__banner': true,
+        'app__banner--mobile': isMobile
+        })}>
         <Banner/>
       </div>
       <div 
