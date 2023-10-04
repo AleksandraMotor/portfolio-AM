@@ -1,0 +1,90 @@
+@import '../../scss/functions/px-to-rem.scss';
+@import '../../scss/mixins/variables.scss';
+@import '../../scss/mixins/breakpoints.scss';
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: toRem(10) toRem(10);
+    // gap: toRem(20);
+    flex-wrap: wrap;
+
+    @include breakpoint-above(xs) {
+        gap: toRem(30);
+    }
+
+    @include breakpoint-above(lg) {
+        gap: toRem(50);
+    }
+
+    &__logo {
+        display: flex;
+        width: toRem(100);
+        height: toRem(100);
+
+        @include breakpoint-above(sm) {
+            height: toRem(120);
+            width: toRem(120);
+        }
+
+        img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: toRem(20);
+        line-height: toRem(30);
+        color: $color_light;
+        max-width: toRem(200);
+        
+        @include breakpoint-above(xs) {
+            font-size: toRem(25);
+            line-height: toRem(35);
+            max-width: toRem(250);
+        }
+
+        @include breakpoint-above(sm) {
+            font-size: toRem(30);
+            line-height: toRem(45);
+            max-width: toRem(400);
+        }
+        
+        @include breakpoint-above(md) {
+            font-size: toRem(30);
+            line-height: toRem(40);
+        }
+
+        &__title {
+            color: $color_primary;    
+        }
+
+        &__subtitle {
+            font-size: toRem(15);
+
+            @include breakpoint-above(xs) {
+                font-size: toRem(18);
+                line-height: toRem(25);
+            }
+
+            @include breakpoint-above(sm) {
+                font-size: toRem(20);
+            }
+
+            @include breakpoint-above(md) {
+                font-size: toRem(35);
+            }
+
+            @include breakpoint-above(md) {
+                font-size: toRem(20);
+            }
+        } 
+    }
+}

@@ -1,0 +1,50 @@
+@import '../../scss/functions/px-to-rem.scss';
+@import '../../scss/mixins/breakpoints.scss';
+@import '../../scss/mixins/variables.scss';
+
+.sidebar {
+    padding: toRem(5) toRem(10);
+
+    display: flex;
+
+    &--desktop {
+        flex-direction: column;
+    }
+
+    &__burger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: toRem(50);
+        width: toRem(50);        
+        font-size: toRem(25);
+        transition: border-radius 0.4s ease;
+        background: $bg_color_light;
+        color: $color_primary;
+        border: toRem(2) solid;
+        border-radius: toRem(8);
+        padding: toRem(10);
+        margin-right: toRem(10);
+
+        &--show-menu {
+            color: $color_secondary;
+            border-radius: 50%;
+            transform: rotate(180deg);
+            transition: transform 0.5s linear;
+        }
+
+        &--desktop {
+            margin-right: toRem(0);
+            padding: toRem(10);
+            margin: toRem(5) toRem(5) toRem(0) toRem(5);
+            height: toRem(80);
+            width: toRem(80);
+            border: toRem(3) solid;
+            font-size: toRem(30);
+        }
+    }
+
+    &__content {
+        flex-grow: 1;
+    }
+}

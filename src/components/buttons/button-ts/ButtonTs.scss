@@ -1,0 +1,67 @@
+@import '../../../scss/functions/px-to-rem.scss';
+@import '../../../scss/mixins/breakpoints.scss';
+@import '../../../scss/mixins/variables.scss';
+
+.button-ts {
+  cursor: pointer;
+
+  &__frame {
+    position: relative;
+    width: toRem(150);
+    height: toRem(100);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    
+    &__icon {
+      position: absolute;
+      top: calc(50% - 44px);
+      left: calc(50% - 35px);
+      font-size: toRem(70);
+      margin-top: toRem(13);
+    }
+
+    &__description {
+      font-size: toRem(20);
+      font-family: monospace;
+      overflow: hidden;
+      border-right: 4px solid transparent;
+      letter-spacing: toRem(3);
+      opacity: 0;
+      height: toRem(30);
+      width: toRem(145);
+    }
+  }
+
+  &:hover &__frame__description, &:focus &__frame__description, &:active &__frame__description {
+    opacity: 1;
+    border-right: toRem(4) solid #6019bd;
+    animation: typewriter 5s steps(10), cursor .3s step-end infinite;
+  }
+
+  &:hover &__frame__icon, &:focus &__frame__icon, &:active &__frame__icon {
+    top: 0;
+    left: calc(50% - 25px);
+    font-size: toRem(50);
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  
+  to {
+      width: toRem(145);
+  }
+}
+  
+@keyframes cursor {
+  from {
+    border-color: transparent
+  }
+  
+  50% {
+    border-color: #6019bd
+  }
+}  

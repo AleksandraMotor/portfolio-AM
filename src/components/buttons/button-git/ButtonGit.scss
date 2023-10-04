@@ -1,0 +1,55 @@
+@import '../../../scss/functions/px-to-rem.scss';
+@import '../../../scss/mixins/breakpoints.scss';
+@import '../../../scss/mixins/variables.scss';
+
+.button-git {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__frame {
+        position: relative;
+        width: toRem(80);
+        height: toRem(80);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background-color: $color_primary;
+        color: $color_secondary;
+        border: toRem(2) solid;
+        border-radius: toRem(8);
+        transition: 0.5s linear;
+        cursor: pointer;
+
+        &__icon {
+            font-size: toRem(60);
+            transition: 0.5s linear;
+            margin-top: toRem(13);
+        }
+
+        &__description {
+            position: absolute;
+            top: calc(50% - 80px);
+            left: calc(50% - 20px);
+            font-size: toRem(30);
+            transition: 0.6s ease-in-out;
+        }
+
+        &:hover, &:focus, &:active {
+            width: toRem(120);
+            background-color: $color_light;
+            color: $bg_color;  
+            box-shadow: 0px 0px 10px 3px $color_light;      
+        }
+
+        &:hover &__icon {
+            font-size: toRem(80);
+            transform: translateY(50%);
+        }
+
+        &:hover &__description {
+            top: calc(50% - 30px);
+        }
+    }   
+}

@@ -1,0 +1,95 @@
+@import '../../../scss/functions/px-to-rem.scss';
+@import '../../../scss/mixins/breakpoints.scss';
+@import '../../../scss/mixins/variables.scss';
+
+.button-tailwind {
+
+    &__border {
+        position: relative;
+        overflow: hidden;
+        border-top-left-radius: 20px;
+        cursor: pointer;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0 0 toRem(10) #07B0CE;
+        background-color: #0b1120;
+        color: $color_light;
+
+        &__frame {
+            position: relative;
+            font-size: toRem(25);
+            font-weight: bold;
+            z-index: 1;
+            padding: toRem(5) toRem(10);
+            display: flex;
+            align-items: center;
+            margin-top: toRem(6);
+
+            &__description {
+                margin-bottom: toRem(6);
+                margin-left: toRem(5);
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: toRem(200);
+            height: toRem(20);
+            top: calc(50% - 10px);
+            right: calc(50% - 100px);
+            background: linear-gradient($color_primary, $color_secondary);
+            transform: rotate(-35deg);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 4px;
+            background-color: #07B0CE;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        &:hover &__frame, &:focus &__frame, &:active &__frame {
+            &__icon {
+                animation: wind 1s linear infinite;                    
+            }                
+        }
+
+        &:hover, &:focus, &:active {
+            color: #07B0CE;
+
+            &::before {
+                animation: rotate-border 4s linear infinite;
+            }
+
+            &::after {
+                background-color: $color_light;
+            }
+        }
+    }
+}
+
+@keyframes rotate-border {
+    0% {
+      transform: rotate(-35deg);
+    }
+  
+    100% {
+      transform: rotate(325deg);
+    }
+}
+
+@keyframes wind {
+    0% {
+        rotate: 15deg;
+    }
+
+    50% {
+        rotate: -15deg;
+    }
+
+    100% {
+        rotate: 15deg;
+    }
+}

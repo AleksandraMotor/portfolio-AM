@@ -1,0 +1,37 @@
+@import '../../../scss/functions/px-to-rem.scss';
+@import '../../../scss/mixins/breakpoints.scss';
+@import '../../../scss/mixins/variables.scss';
+
+.button-sass {
+    display: flex;
+    font-style: italic;
+    position: relative;
+    align-items: center;
+    cursor: pointer;
+
+    &__description {
+        color: #CE679A;
+        font-size: toRem(40);
+        opacity: 0;
+        margin-left: toRem(60);
+    }
+
+    &__icon {
+        position: absolute;
+        top: calc(50% - 30px);
+        left: calc(50% - 30px);
+        font-size: toRem(60);
+        color: $color_primary;
+    }
+
+    &:hover &__description, &:focus &__description, &:active &__description {
+        opacity: 1;
+        transition: 1s 0.5s linear;
+    }
+
+    &:hover &__icon, &:focus &__icon, &:active &__icon {
+        color: #CE679A;
+        left: calc(50% - 60px);
+        transition: 1s linear;            
+    }
+}

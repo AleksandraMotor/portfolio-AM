@@ -1,0 +1,65 @@
+@import '../../../scss/functions/px-to-rem.scss';
+@import '../../../scss/mixins/breakpoints.scss';
+@import '../../../scss/mixins/variables.scss';
+
+.button-angular {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &__frame {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: toRem(25);
+        border: toRem(3) solid;
+        padding: toRem(2) toRem(5);
+        background-color: $color_primary;
+        color: $bg_color;
+        transition: all linear 0.5s;
+
+        &__icon {
+            font-size: toRem(40);
+            margin-top: toRem(10);
+        }
+
+        &__description {
+            font-size: toRem(30);
+            line-height: toRem(50);
+        }
+    }
+
+    &:hover &__frame, &:focus &__frame, &:active &__frame {
+        animation: jelly 0.5s 0.2s linear;
+        color: $color_light;
+        background-color: #DD0031;
+        transition: all linear 0.5s;
+    }
+}
+
+@keyframes jelly {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    20% {
+        transform: scale(1.2, 0.8);
+    }
+
+    40% {
+        transform: scale(0.8, 1.2);
+    }
+
+    60% {
+        transform: scale(1.2, 0.8);
+    }
+
+    80% {
+        transform: scale(0.8, 1.2);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}

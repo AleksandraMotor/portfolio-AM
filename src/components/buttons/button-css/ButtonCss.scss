@@ -1,0 +1,30 @@
+@import '../../../scss/functions/px-to-rem.scss';
+@import '../../../scss/mixins/breakpoints.scss';
+@import '../../../scss/mixins/variables.scss';
+
+.button-css {
+
+    &__border {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: toRem(50);
+        line-height: toRem(50);
+        padding: toRem(20) toRem(10) toRem(10) toRem(10);
+        color: $color_primary;
+        border: solid toRem(3);
+        border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
+        cursor: pointer;
+        transition: border 0.5s linear, border-radius 0.5s linear, color 1s linear;
+
+        &__description {
+            margin-bottom: toRem(10);
+        }
+
+        &:hover, &:focus, &:active {
+            border-radius: 4% 95% 6% 95% / 95% 4% 92% 5%;
+            color: #2465F1;
+            border: dashed;
+        }
+    }
+}
