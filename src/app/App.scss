@@ -56,8 +56,7 @@
       padding-top: toRem(100);
 
       &--desktop {
-        padding-left: toRem(80);
-        padding-top: toRem(20);
+        padding: toRem(20) toRem(100);
       }
     }
   }

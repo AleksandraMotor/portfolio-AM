@@ -9,7 +9,7 @@ import SidebarDesktop from './components/sidebar-desktop/SidebarDesktop';
 import './Sidebar.scss';
 
 const Sidebar: React.FunctionComponent = () => {
-    const [showMenu, setshowMenu] = useState(true);
+    const [showMenu, setshowMenu] = useState(false);
     const showSidebar = () => setshowMenu(!showMenu);
 
     return (

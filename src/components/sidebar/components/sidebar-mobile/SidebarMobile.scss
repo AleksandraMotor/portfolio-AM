@@ -23,12 +23,13 @@
         color: $color_primary;
         border: toRem(2) solid;
 
-        &:hover {
+        &:hover, &:focus {
             flex-grow: 1;
             color: $color_secondary;
         }
 
         &__text {
+            font-size: toRem(14);
             padding: toRem(5);
             transform: rotate(-90deg);
             transition: all 0.5s;
@@ -38,6 +39,7 @@
         &:hover &__text, &:focus &__text {
             transform: rotate(0);
             transition: transform 0.5s linear;
+            font-weight: 900;
         }
     }
 }

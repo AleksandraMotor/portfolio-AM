@@ -1,8 +1,8 @@
 import React from 'react';
 import responsiveDesign from '../../assets/img/responsiveDesign.png';
+import { Link } from 'react-router-dom';
 
 import './Home.scss';
-import { Link } from 'react-router-dom';
 
 const Home: React.FunctionComponent = () => {
     return (

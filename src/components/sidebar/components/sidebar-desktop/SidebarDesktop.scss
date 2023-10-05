@@ -39,11 +39,9 @@
         }
 
         &:hover &__text {
-            font-size: toRem(30);
+            font-size: toRem(25);
             margin: toRem(0) toRem(10);
             transition: 0.6s;
         }
-
-
     }
 }

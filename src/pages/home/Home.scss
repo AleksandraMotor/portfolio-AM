@@ -10,7 +10,7 @@
     color: $color_light;
     font-size: toRem(25);
     line-height: toRem(40);
-    margin: toRem(0) toRem(10);
+    margin: toRem(0) toRem(25);
     
     @include breakpoint-above(xs) {
         font-size: toRem(30);
@@ -57,7 +57,7 @@
     }
         
     &__text {
-        margin: toRem(10);
+        margin: toRem(10) toRem(0);
         font-size: toRem(20);
         line-height: toRem(35);
 
@@ -82,7 +82,9 @@
         @include breakpoint-above(md) {
             font-size: toRem(20);
             line-height: toRem(40);
-            margin: toRem(20) toRem(50);
+            // margin: toRem(20) toRem(50);
+            margin: toRem(20) toRem(0);
+
         }
     }
 

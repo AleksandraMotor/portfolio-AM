@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SidebarData } from '../../SidebarData';
-import classNames from 'classnames';
 
 import './SidebarMobile.scss';
 
@@ -13,9 +12,7 @@ const SidebarMobile: React.FC = () => {
                     <Link
                         key={index}
                         to={item.path}
-                        className={classNames({
-                            'menu-m__item': true,
-                        })}
+                        className="menu-m__item"
                     >
                         <div className='menu-m__item__text'>
                             {item.title}
