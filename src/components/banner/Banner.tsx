@@ -5,7 +5,7 @@ import './Banner.scss';
 
 const Banner: React.FC = () => {
     return (
-        <div className='banner'>
+        <div className="banner">
             <div className="banner__logo">    
                 <img src={logo} alt='Grafika - RWD'/>              
             </div>

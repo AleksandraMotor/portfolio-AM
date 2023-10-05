@@ -23,7 +23,6 @@
         color: $color_primary;
         border: toRem(2) solid;
         border-radius: toRem(8);
-        padding: toRem(10);
         margin-right: toRem(10);
 
         &--show-menu {
@@ -34,13 +33,12 @@
         }
 
         &--desktop {
+            font-size: toRem(30);
             margin-right: toRem(0);
-            padding: toRem(10);
             margin: toRem(5) toRem(5) toRem(0) toRem(5);
             height: toRem(80);
             width: toRem(80);
             border: toRem(3) solid;
-            font-size: toRem(30);
         }
     }
 
