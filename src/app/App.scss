@@ -16,9 +16,10 @@
     height: toRem(200);
     display: flex;
     justify-content: center;
+    box-shadow: inset 0px 0px 20px 0px $color_secondary;
 
-    &--mobile {
-      box-shadow: inset 0px 0px 20px 0px $color_secondary;
+    &--desktop {
+      box-shadow: none;
     }
   }
 
@@ -62,13 +63,14 @@
   }
 
   &__footer {
-    height: toRem(100);
+    height: toRem(80);
     display: flex;
     justify-content: center;
+    box-shadow: inset 0px 0px 20px 0px $color_secondary;
 
-    &--mobile {
-      height: toRem(80);
-      box-shadow: inset 0px 0px 20px 0px $color_secondary;
+    &--desktop {
+      height: toRem(100);
+      box-shadow: none;
     }
   }
 }

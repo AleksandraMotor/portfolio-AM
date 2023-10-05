@@ -18,7 +18,7 @@ const App: React.FunctionComponent = () => {
     <div className="app">
       <div className={classNames({
         'app__banner': true,
-        'app__banner--mobile': isMobile
+        'app__banner--desktop': isDesktop
         })}>
         <Banner/>
       </div>
@@ -54,7 +54,7 @@ const App: React.FunctionComponent = () => {
       </div>
       <div className={classNames({
         'app__footer': true,
-        'app__footer--mobile': isMobile
+        'app__footer--desktop': isDesktop
         })}
       >
         <Footer/>
