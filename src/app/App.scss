@@ -45,7 +45,7 @@
       font-family: $font_menu;
 
       &--desktop {
-        height: toRem(500);
+        height: auto;
         width: toRem(200); 
       }
     }      
@@ -58,6 +58,17 @@
       &--desktop {
         padding: toRem(20) toRem(100);
       }
+    }
+  }
+
+  &__footer {
+    height: toRem(100);
+    display: flex;
+    justify-content: center;
+
+    &--mobile {
+      height: toRem(80);
+      box-shadow: inset 0px 0px 20px 0px $color_secondary;
     }
   }
 }
