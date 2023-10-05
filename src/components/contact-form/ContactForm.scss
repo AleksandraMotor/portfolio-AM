@@ -1,6 +1,10 @@
-
+@import '../../scss/functions/px-to-rem.scss';
+@import '../../scss/mixins/variables.scss';
+@import '../../scss/mixins/breakpoints.scss';
 
 .contact-form {
+    width: toRem(500);
+
     &__content {
         display: flex;
         flex-direction: column;

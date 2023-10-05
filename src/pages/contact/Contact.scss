@@ -3,7 +3,7 @@
 @import '../../scss/mixins/variables.scss';
 
 .contact-page {
-    height: toRem(1000);
     color: $color_primary;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }

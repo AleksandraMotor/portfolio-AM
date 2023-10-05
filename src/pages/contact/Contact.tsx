@@ -1,7 +1,7 @@
 import React from 'react';
+import ContactForm from '../../components/contact-form/ContactForm';
 
 import './Contact.scss';
-import ContactForm from '../../components/contact-form/ContactForm';
 
 const Contact: React.FunctionComponent = () => {
     return (
