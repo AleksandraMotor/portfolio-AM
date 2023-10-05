@@ -6,10 +6,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: toRem(0) toRem(10);
-
 
     &--desktop {
-        padding: toRem(10) toRem(120);
+        padding: toRem(10) toRem(10);
     }
 }
