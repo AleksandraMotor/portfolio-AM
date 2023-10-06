@@ -46,24 +46,29 @@ const ContactForm: React.FC = () => {
                     name="user_name"
                     type="text"
                     placeholder="Username"
+                    className="contact-form__content__input"
                     {...register("userName", {
                         required: "Username is required",
                         minLength: {
                             value: 3,
-                            message: "Username must be atleast 3 characters long"
+                            message: `Username must be atleast 3 characters long`
                         },
                         maxLength: {
-                            value: 6,
-                            message: "Username must be atmost 6 characters long"
+                            value: 30,
+                            message: "Username must be atmost 30 characters long"
                         },
                     })}
                 />
-                <p>{errors.userName?.message?.toString()}</p>
+                <div className="contact-form__content__message">
+                    {errors.userName?.message?.toString()}
+                </div>
+                
                 <label>Email</label>
                 <input
                     name="user_email"
                     type="email"
                     placeholder="Email"
+                    className="contact-form__content__input"
                     {...register("userEmail", {
                         required: "Email is Requred...",
                         pattern: {
@@ -72,14 +77,16 @@ const ContactForm: React.FC = () => {
                         },
                     })} 
                 />
-                <p>{errors.userEmail?.message?.toString()}</p>
+                <div className="contact-form__content__message">
+                    {errors.userEmail?.message?.toString()}
+                </div>
                 <label>Message</label>
                 <textarea
                     name="message"
                     placeholder="Message"
-                    rows={10}
+                    className="contact-form__content__input"
                 />
-                <input type="submit" value="Send" />
+                <input className="contact-form__content__send-button" type="submit" value="Send" />
             </form>
         </div>
     );

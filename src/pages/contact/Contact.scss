@@ -5,5 +5,16 @@
 .contact-page {
     color: $color_primary;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin: toRem(20) toRem(0);
+
+    &__line {
+        width: 50%;
+        height: toRem(2);
+        border-radius: toRem(8);
+        background-image: $bg_gradient;
+        margin: toRem(10) toRem(0);
+    }
 }
