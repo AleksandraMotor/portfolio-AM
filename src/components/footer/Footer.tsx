@@ -4,18 +4,19 @@ import * as FiIcons from 'react-icons/fi';
 
 import './Footer.scss';
 
-const Footer: React.FC = () =>{
+const Footer: React.FunctionComponent = () => {
+
     return (
         <div className="footer">
-            <div className="footer__icon">
-                <SiIcons.SiGithub/>
-            </div>
-            <div className="footer__icon">
-                <SiIcons.SiLinkedin/>
-            </div>
-            <div className="footer__icon">
-                <FiIcons.FiMail/>
-            </div>
+                <a href="https://github.com/AleksandraMotor">
+                    <SiIcons.SiGithub/>
+                </a>
+                <a href="https://www.linkedin.com/in/aleksandramotor/">
+                    <SiIcons.SiLinkedin/>
+                </a>
+                <a href="https://github.com/AleksandraMotor">
+                    <FiIcons.FiMail/>
+                </a>      
         </div>
     );
 };

@@ -12,12 +12,18 @@
     color: $color_light;
     font-size: toRem(40);
 
-    &__icon {
+    a {
         display: flex;
         align-items: center;
         justify-content: center;
         padding: toRem(5);
+        color: $color_light;
         border: toRem(2) solid $color_light;
         border-radius: toRem(8);
+
+        &:hover {
+            color: $color_primary;
+            border-color: $color_primary;
+        }
     }
 }
