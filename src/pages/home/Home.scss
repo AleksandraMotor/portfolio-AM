@@ -26,35 +26,6 @@
         font-size: toRem(30);
         line-height: toRem(40);
     }
-    
-    &__foto {
-        position: relative;
-        margin: toRem(10);
-        height: toRem(200);
-        width: toRem(150);
-        border-radius: toRem(8);
-        box-shadow: inset 0px 0px 10px 2px $color_primary;
-        background-image: url('../../assets/img/photo.jpg');
-        background-repeat: no-repeat, no-repeat;
-        background-size: cover;
-        background-position: center, center;
-
-        &::after {
-            position: absolute;
-            top: 0;
-            left: 0;
-            content: "";
-            width: 100%;
-            height: 100%;
-            background-color: $color_secondary;
-            opacity: 0.15;
-            border-radius: toRem(8);
-        }
-
-        @include breakpoint-above(md) {
-            margin: toRem(20);
-        }
-    }
         
     &__text {
         margin: toRem(10) toRem(0);

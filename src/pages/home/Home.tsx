@@ -7,7 +7,9 @@ import './Home.scss';
 const Home: React.FunctionComponent = () => {
     return (
         <div className="home">
-            <div className="home__foto"></div>
+            <div className="home__graphic">
+                <img src={responsiveDesign} alt='Grafika - RWD'/>
+            </div>
             <div className="home__text">
                 After graduating in technical physics from Cracow University of Technology,
                 I started working for multiple
@@ -28,9 +30,6 @@ const Home: React.FunctionComponent = () => {
             </div>
             <div className="home__text">
                 Feel free to contact me via the "<Link to='/contact' className="home__text--link">Contact</Link>" page in the menu and check out my socials below.
-            </div>
-            <div className="home__graphic">
-                <img src={responsiveDesign} alt='Grafika - RWD'/>
             </div>
         </div>
     );
