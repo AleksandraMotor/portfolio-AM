@@ -1,6 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { isDesktop, isMobile } from 'react-device-detect';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { isDesktop } from 'react-device-detect';
 import Home from '../pages/home/Home';
 import Skills from '../pages/skills/Skills';
 import Projects from '../pages/projects/Projects';
