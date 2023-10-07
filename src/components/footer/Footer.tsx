@@ -1,6 +1,7 @@
 import React from "react";
 import * as SiIcons from 'react-icons/si';
 import * as FiIcons from 'react-icons/fi';
+import { Link } from "react-router-dom";
 
 import './Footer.scss';
 
@@ -14,9 +15,9 @@ const Footer: React.FunctionComponent = () => {
                 <a href="https://www.linkedin.com/in/aleksandramotor/">
                     <SiIcons.SiLinkedin/>
                 </a>
-                <a href="/portfolio-AM/contact">
+                <Link to="/portfolio-AM/contact">
                     <FiIcons.FiMail/>
-                </a>      
+                </Link>      
         </div>
     );
 };
