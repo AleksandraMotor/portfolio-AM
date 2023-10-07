@@ -24,12 +24,12 @@ const Home: React.FunctionComponent = () => {
                 company where I can expand my knowledge.
             </div>
             <div className="home__text">
-                Take a look at my <Link to='/portfolio-AM/skills' className="home__text--link">skills</Link> presented in the form of 
+                Take a look at my <Link to='/skills' className="home__text--link">skills</Link> presented in the form of 
                 <span className="home__text--highlight"> animated buttons </span>and don't forget to check out the 
-                <span className="home__text--highlight"> interactive cards </span>with my <Link to='/portfolio-AM/projects' className="home__text--link">projects</Link>!
+                <span className="home__text--highlight"> interactive cards </span>with my <Link to='/projects' className="home__text--link">projects</Link>!
             </div>
             <div className="home__text">
-                Feel free to contact me via the "<Link to='/portfolio-AM/contact' className="home__text--link">Contact</Link>" page in the menu and check out my socials below.
+                Feel free to contact me via the "<Link to='/contact' className="home__text--link">Contact</Link>" page in the menu and check out my socials below.
             </div>
         </div>
     );
