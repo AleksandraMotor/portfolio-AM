@@ -44,10 +44,10 @@ const App: React.FunctionComponent = () => {
             })}
           >
             <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/skills' element={<Skills />} />
-              <Route path='/projects' element={<Projects />} />    
-              <Route path='/contact' element={<Contact />} />            
+              <Route path='/portfolio-AM/' element={<Home />} />
+              <Route path='/portfolio-AM/skills' element={<Skills />} />
+              <Route path='/portfolio-AM/projects' element={<Projects />} />    
+              <Route path='/portfolio-AM/contact' element={<Contact />} />            
             </Routes>
           </div>
         </Router> 
