@@ -15,7 +15,7 @@ const Footer: React.FunctionComponent = () => {
                 <a href="https://www.linkedin.com/in/aleksandramotor/">
                     <SiIcons.SiLinkedin/>
                 </a>
-                <Link to="/portfolio-AM/contact">
+                <Link to="/contact">
                     <FiIcons.FiMail/>
                 </Link>      
         </div>
