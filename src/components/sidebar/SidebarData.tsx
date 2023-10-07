@@ -12,17 +12,17 @@ export const SidebarData = [
     },
     {
         title: 'Skills',
-        path: '/portfolio-AM/skills',
+        path: '/skills',
         icon: <GiIcons.GiSkills/>
     },
     {
         title: 'Projects',
-        path: '/portfolio-AM/projects',
+        path: '/projects',
         icon: <VscFileSubmodule/>
     },
     {
         title: 'Contact',
-        path: '/portfolio-AM/contact',
+        path: '/contact',
         icon: <TbCategory2/>
     }
 ];

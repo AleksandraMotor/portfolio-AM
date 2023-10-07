@@ -4,7 +4,7 @@ module.exports = {
     entry: './src/index.tsx',
     output: {
         path: path.join(__dirname, '/'),
-        filename: 'bundle.js'
+        filename: 'main.js'
     },
     devServer: {
         port: 3000
