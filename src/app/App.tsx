@@ -14,9 +14,9 @@ export default function App() {
             <Routes>
               <Route path='portfolio-AM/' element={<Layout />}>
                 <Route index element={<Home />} />
-                <Route path='portfolio-AM/skills' element={<Skills />} />
-                <Route path='portfolio-AM/projects' element={<Projects />} />    
-                <Route path='portfolio-AM/contact' element={<Contact />} /> 
+                <Route path='/portfolio-AM/skills' element={<Skills />} />
+                <Route path='/portfolio-AM/projects' element={<Projects />} />    
+                <Route path='/portfolio-AM/contact' element={<Contact />} /> 
               </Route>
             </Routes>
         </BrowserRouter> 
