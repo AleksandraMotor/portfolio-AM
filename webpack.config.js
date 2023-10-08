@@ -3,8 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: './src/index.tsx',
     output: {
-        path: path.join(__dirname, '/docs'),
-        filename: 'main.js'
+        path: path.join(__dirname, '/'),
+        filename: 'bundle.js'
     },
     devServer: {
         port: 3000
