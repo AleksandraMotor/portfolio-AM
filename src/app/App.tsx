@@ -10,16 +10,18 @@ import './App.scss';
 
 const App: React.FunctionComponent = () => {
   return (
-        <Router>
+    <div>
+      <Router>
             <Routes>
               <Route path='/' element={<Layout />}>
                 <Route index element={<Home />} />
                 <Route path='skills' element={<Skills />} />
                 <Route path='projects' element={<Projects />} />    
-                <Route path='contact' element={<Contact />} />  
+                <Route path='contact' element={<Contact />} /> 
               </Route>
             </Routes>
         </Router> 
+    </div>
   );
 };
 

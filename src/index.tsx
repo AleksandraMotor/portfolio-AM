@@ -8,7 +8,5 @@ const container = document.getElementById('app');
 const root = ReactDOMClient.createRoot(container);
 
 root.render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>
+    <App />
 );
