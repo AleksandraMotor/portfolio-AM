@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from '../pages/home/Home';
 import Skills from '../pages/skills/Skills';
 import Projects from '../pages/projects/Projects';
@@ -10,17 +10,18 @@ import './App.scss';
 
 const App: React.FunctionComponent = () => {
   return (
-    <div>
-      <Router>
+    <div className="app">
+      <BrowserRouter>
             <Routes>
               <Route path='/' element={<Layout />}>
                 <Route index element={<Home />} />
                 <Route path='skills' element={<Skills />} />
                 <Route path='projects' element={<Projects />} />    
                 <Route path='contact' element={<Contact />} /> 
+                <Route path='*' element={<Contact />} /> 
               </Route>
             </Routes>
-        </Router> 
+        </BrowserRouter> 
     </div>
   );
 };

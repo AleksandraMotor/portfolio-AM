@@ -11,39 +11,39 @@ import './Layout.scss';
 
 const Layout: React.FunctionComponent = () => {
   return (
-    <div className="app">
+    <div className="layout">
       <div className={classNames({
-        'app__banner': true,
-        'app__banner--desktop': isDesktop
+        'layout__banner': true,
+        'layout__banner--desktop': isDesktop
         })}>
         <Banner/>
       </div>
       <div 
         className={classNames({
-          'app__main': true,
-          'app__main--desktop': isDesktop,
+          'layout__main': true,
+          'layout__main--desktop': isDesktop,
         })}
       >
           <div
             className={classNames({
-              'app__main__sidebar': true,
-              'app__main__sidebar--desktop': isDesktop,
+              'layout__main__sidebar': true,
+              'layout__main__sidebar--desktop': isDesktop,
             })}
           >
             <Sidebar/>
           </div>
           <div
             className={classNames({
-              'app__main__content': true,
-              'app__main__content--desktop': isDesktop,
+              'layout__main__content': true,
+              'layout__main__content--desktop': isDesktop,
             })}
           >
             <Outlet/>
           </div>
       </div>
       <div className={classNames({
-        'app__footer': true,
-        'app__footer--desktop': isDesktop
+        'layout__footer': true,
+        'layout__footer--desktop': isDesktop
         })}
       >
         <Footer/>
