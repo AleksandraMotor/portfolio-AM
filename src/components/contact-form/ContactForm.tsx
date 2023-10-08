@@ -43,11 +43,11 @@ const ContactForm: React.FC = () => {
             >
                 <label>Name</label>
                 <input
-                    name="user_name"
+                    name="to_name"
                     type="text"
                     placeholder="Username"
                     className="contact-form__content__input"
-                    {...register("userName", {
+                    {...register("to_name", {
                         required: "Username is required",
                         minLength: {
                             value: 3,
@@ -60,7 +60,7 @@ const ContactForm: React.FC = () => {
                     })}
                 />
                 <div className="contact-form__content__message">
-                    {errors.userName?.message?.toString()}
+                    {errors.to_name?.message?.toString()}
                 </div>
                 
                 <label>Email</label>

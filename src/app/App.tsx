@@ -12,11 +12,22 @@ export default function App() {
   return (
       <BrowserRouter>
             <Routes>
-              <Route path='portfolio-AM/' element={<Layout />}>
+
+              {/* Prod mode */}
+
+              {/* <Route path='portfolio-AM/' element={<Layout />}>
                 <Route index element={<Home />} />
                 <Route path='/portfolio-AM/skills' element={<Skills />} />
                 <Route path='/portfolio-AM/projects' element={<Projects />} />    
                 <Route path='/portfolio-AM/contact' element={<Contact />} /> 
+              </Route> */}
+
+              {/* Dev mode */}
+              <Route path='/' element={<Layout />}>
+                <Route index element={<Home />} />
+                <Route path='skills' element={<Skills />} />
+                <Route path='projects' element={<Projects />} />    
+                <Route path='contact' element={<Contact />} /> 
               </Route>
             </Routes>
         </BrowserRouter> 
