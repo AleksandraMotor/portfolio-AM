@@ -7,7 +7,7 @@ import { TbCategory2 } from "react-icons/tb";
 export const SidebarData = [
     {
         title: 'Home',
-        path: 'portfolio-AM/',
+        path: '/',
         icon: <FaIcons.FaHome/>
     },
     {
