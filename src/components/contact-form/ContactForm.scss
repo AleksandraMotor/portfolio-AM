@@ -2,11 +2,53 @@
 @import '../../scss/mixins/variables.scss';
 @import '../../scss/mixins/breakpoints.scss';
 
+@keyframes opacityButton {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rotateButton {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fly {
+    from {
+        transform: translateY(0.1em);
+        transform: rotate(10deg);
+    }
+    to {
+        transform: rotate(-10deg);
+        transform: translateY(-0.1em);
+    }
+}
+
+@keyframes fly-away {
+    from {
+        font-size: toRem(50);
+    }
+    to {
+        font-size: toRem(0);
+    }
+}
+
 .contact-form {
     font-size: toRem(18);
-    padding: toRem(10) toRem(30);
     width: 100%;
-    font-family: $font_menu;
+    // font-family: $font_menu;
+    position: relative;
+    padding: toRem(10) toRem(30);
 
     @include breakpoint-above(md) {
         padding: toRem(10) toRem(150);
@@ -34,7 +76,6 @@
             height: toRem(20);
             font-size: toRem(14);
             line-height: toRem(20);
-            font-weight: 100;
         }
         
         label {
@@ -64,4 +105,135 @@
             }
         }
     }
+
+    &__message {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        padding: toRem(10) toRem(20);
+        font-weight: 500;
+        text-align: center;
+        // background-color: blue;
+
+        @include breakpoint-above(md) {
+            padding: toRem(10) toRem(130);
+        }
+
+        &--hide {
+            display: none;
+        }
+
+        &__validation {
+            width: 100%;
+            height: 100%;
+            border-radius: toRem(8);
+            background-image: $bg_gradient;
+            color: $bg_color;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // justify-content: center;
+
+            &__checking {
+                font-size: toRem(20);
+                height: toRem(50);
+                display: flex;
+                align-items: center;
+
+                svg {
+                    margin: toRem(8);
+                    animation-name: rotateButton;
+                    animation-duration: 1s;
+                    animation-iteration-count: 7;
+                    animation-timing-function: linear;
+                    
+                }
+            }
+
+            &__info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: $color_light_transparent;
+                padding: toRem(15);
+                margin: toRem(15) toRem(30);
+                border-radius: toRem(8);
+                animation-name: opacityButton;
+                opacity: 1;
+                animation-duration: 3s;
+                animation-delay: 4s;
+                animation-fill-mode: backwards;
+                animation-timing-function: ease-in;
+
+                span {
+                    margin: toRem(25);
+                }
+
+                button {
+                    background-color: transparent;
+                    color: $bg_color;
+                    font-size: toRem(16);
+                    padding: toRem(5) toRem(10);
+                    border: 2px solid $bg_color;
+                    border-radius: toRem(8);
+                    display: flex;
+                    align-items: center;
+
+                    &:hover {
+                        color: $color_primary;
+                        background-color: $bg_color;
+                    }
+
+                    svg {
+                        font-size: toRem(24);
+                        margin: toRem(8);
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+
+            &__send {
+                border-radius: toRem(8);
+                background-image: $bg_gradient;
+                width: 100%;
+                height: 100%;
+                color: $bg_color;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                animation-name: opacityButton;
+                opacity: 1;
+                animation-duration: 3s;
+                animation-delay: 4s;
+                animation-fill-mode: backwards;
+                animation-timing-function: ease-in;
+
+                svg {
+                    font-size: toRem(30);
+                    animation: fly 0.6s ease-in-out infinite alternate;
+                    animation: fly-away 15s ease-in-out;
+                }
+
+            }
+
+            &__error {
+                border-radius: toRem(8);
+                background-image: $bg_gradient;
+                width: 100%;
+                height: 100%;
+                color: red;
+            }  
+        }
+
+        
+
+        // @include breakpoint-above(md) {
+        //     margin: toRem(10) toRem(150);
+        // }
+
+    }
 }
+

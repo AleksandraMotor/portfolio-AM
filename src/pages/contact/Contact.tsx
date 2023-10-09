@@ -8,7 +8,7 @@ const Contact: React.FunctionComponent = () => {
         <div className="contact-page">
             <h1>Contact</h1>
             <div className="contact-page__line"></div>
-            <h2>Get in touch</h2>
+            {/* <h2>Get in touch</h2> */}
             <ContactForm/>
         </div>
     );

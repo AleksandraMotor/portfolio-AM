@@ -2,10 +2,12 @@
 $color_primary: #5be9b9;
 $color_secondary: #6e06f3;
 $color_light: #fff;
+$color_light_transparent: rgba(255, 255, 255, 0.3);
 $bg_color :#131a3a;
 $bg_color_light :rgba(19, 26, 58, 0.95);
 $bg_gradient: linear-gradient(90deg, rgba(91,233,185,1) 0%, rgba(110,6,243,1) 100%);
 
 //font-family
 $font_menu: 'Urbanist', sans-serif;
-$font_main: 'Alata', sans-serif;
+// $font_main: 'Alata', sans-serif;
+$font_main: 'Montserrat', sans-serif;
