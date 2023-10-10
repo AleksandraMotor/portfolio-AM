@@ -8,8 +8,10 @@ import * as HiIcons from 'react-icons/hi2';
 import * as AiIcons from 'react-icons/ai';
 import * as TfiIcons from 'react-icons/tfi';
 import * as RxIcons from 'react-icons/rx';
+import * as BiIcons from 'react-icons/bi'
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
+import ButtonGoBack from '../buttons/button-go-back/ButtonGoBack';
 
 import './ContactForm.scss';
 
@@ -31,9 +33,7 @@ const ContactForm: React.FC = () => {
         mode: "all",
     });
 
-    // console.log("errors", errors);
-
-    const sendEmail = (data: any) => {
+    const sendEmail = () => {
         // data.preventDefault();
         
         emailjs
@@ -43,13 +43,12 @@ const ContactForm: React.FC = () => {
             form.current, 
             'uS_Xt1WLPdNMYH-IM')
         .then((result) => {
-            console.log("result.text", result.text);
-            console.log("message send");
-
+            // console.log("result.text", result.text);
+            // console.log("message send");
             return (showStatus())
                 
         } , (error) => {
-            console.log("error.text", error.text);
+            // console.log("error.text", error.text);
             return (showErroStatus());
         });
     };
@@ -127,33 +126,14 @@ const ContactForm: React.FC = () => {
                                 className="contact-form__message__validation__checking"
                             >
                                 Checking
-                                <TfiIcons.TfiReload/>
-                                {/* <BsIcons.BsArrowClockwise/>
-                                <BsIcons.BsArrowClockwise/>
                                 <HiIcons.HiOutlineArrowPath/>
-                                <AiIcons.AiOutlineReload/>
-                                <TfiIcons.TfiReload/>
-                                <RxIcons.RxReload/> */}
                             </div>
                             {!showSucess && !showError &&
-                            <div 
-                                className="contact-form__message__validation__info"
-                            >
-                                Form Validation
-                                <span>Check your contact form for validation requirement messages like "Email is required..." or " "Username is to short/long"</span>
-                                <button onClick={showInfo}>Go back to the contact form <GiIcons.GiLobArrow/></button>   
-                            </div> 
-
-                            //error test
-                            // <div className="contact-form__message__validation__error">
-                            // <div>
-                            //     <div>
-                            //         Error Message
-                            //     </div>
-                            //     <Link to='/'>Go to Homepage</Link>
-                            // </div>
-                            // </div>  
-                            
+                                <div className="contact-form__message__validation__info">
+                                    Form Validation
+                                    <span>Check your contact form for validation requirement messages like "Email is required..." or " "Username is to short/long"</span>
+                                    <button onClick={showInfo}>Return to the contact form<GiIcons.GiLobArrow/></button>   
+                                </div>                             
                             }
                             {showSucess &&
                                 <div className="contact-form__message__validation__send">
@@ -161,18 +141,17 @@ const ContactForm: React.FC = () => {
                                     <div>
                                         Message Sent
                                     </div>
-                                    <Link  className="contact-form__message__validation__send__button" to='/'>Go to Homepage</Link>
-                                </div> 
+                                    <ButtonGoBack/>
+                                </div>  
                             }
                             {showError &&
                                 <div className="contact-form__message__validation__error">
-                                    <div>
-                                        <div>
-                                            Error Message
-                                        </div>
-                                        <Link to='/'>Go to Homepage</Link>
+                                    <div className="contact-form__message__validation__error__text">
+                                        <BiIcons.BiMessageSquareError/>
+                                        Error
                                     </div>
-                                </div>  
+                                    <ButtonGoBack/> 
+                                </div> 
                             }  
                         </div>                    
                 </div>                        

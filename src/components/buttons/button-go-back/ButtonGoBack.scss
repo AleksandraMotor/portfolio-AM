@@ -1,0 +1,21 @@
+@import '../../../scss/functions/px-to-rem.scss';
+@import '../../../scss/mixins/breakpoints.scss';
+@import '../../../scss/mixins/variables.scss';
+
+.go-back {
+    background-color: transparent;
+    color: $bg_color;
+    font-size: toRem(16);
+    padding: toRem(5) toRem(10);
+    border: 2px solid $bg_color;
+    border-radius: toRem(8);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    &:hover {
+        color: $color_primary;
+        background-color: $bg_color;
+        border-color: $color_primary;
+    }
+}
