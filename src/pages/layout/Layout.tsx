@@ -8,7 +8,6 @@ import Sidebar from '../../components/sidebar/Sidebar';
 
 import './Layout.scss';
 
-
 const Layout: React.FunctionComponent = () => {
   return (
     <div className="layout">
