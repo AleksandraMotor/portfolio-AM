@@ -23,11 +23,6 @@ const ContactForm: React.FC = () => {
     const showErroStatus = () => setshowError(!showError);
     const form = useRef();
 
-    // const showButton = () => {
-    //     console.log("Animation ended");
-    //     document.getElementById('go-back').classList.add('contact-form__message__validation__info--show');
-    // }
-
     const {
         register, 
         handleSubmit,
@@ -43,7 +38,6 @@ const ContactForm: React.FC = () => {
         
         emailjs
         .sendForm(
-            // 'service_a0hnxc',
             'service_a0hnxcn', 
             'template_czb8tjo', 
             form.current, 
@@ -128,38 +122,47 @@ const ContactForm: React.FC = () => {
                 >
                     
                         <div className="contact-form__message__validation">
+                            <div
+                                id='checking'
+                                className="contact-form__message__validation__checking"
+                            >
+                                Checking
+                                <TfiIcons.TfiReload/>
+                                {/* <BsIcons.BsArrowClockwise/>
+                                <BsIcons.BsArrowClockwise/>
+                                <HiIcons.HiOutlineArrowPath/>
+                                <AiIcons.AiOutlineReload/>
+                                <TfiIcons.TfiReload/>
+                                <RxIcons.RxReload/> */}
+                            </div>
                             {!showSucess && !showError &&
-                                <>
-                                    <div
-                                        id='checking'
-                                        className="contact-form__message__validation__checking"
-                                    >
-                                        Checking
-                                        {/* <BsIcons.BsArrowClockwise/>
-                                        <BsIcons.BsArrowClockwise/>
-                                        <HiIcons.HiOutlineArrowPath/>
-                                        <AiIcons.AiOutlineReload/> */}
-                                        <TfiIcons.TfiReload/>
-                                        {/* <RxIcons.RxReload/>                                 */}
-                                    </div>
-                                    <div 
-                                        id='go-back'
-                                        className="contact-form__message__validation__info"
-                                    >
-                                        Form Validation
-                                        <span>Check your contact form for validation requirement messages like "Email is required..." or " "Username is to short/long"</span>
-                                        <button onClick={showInfo}>Go back to the contact form <GiIcons.GiLobArrow/></button>   
-                                    </div>  
-                                </>
+                            <div 
+                                className="contact-form__message__validation__info"
+                            >
+                                Form Validation
+                                <span>Check your contact form for validation requirement messages like "Email is required..." or " "Username is to short/long"</span>
+                                <button onClick={showInfo}>Go back to the contact form <GiIcons.GiLobArrow/></button>   
+                            </div> 
+
+                            //error test
+                            // <div className="contact-form__message__validation__error">
+                            // <div>
+                            //     <div>
+                            //         Error Message
+                            //     </div>
+                            //     <Link to='/'>Go to Homepage</Link>
+                            // </div>
+                            // </div>  
+                            
                             }
                             {showSucess &&
                                 <div className="contact-form__message__validation__send">
-                                        <IoIcons.IoMdPaperPlane />
-                                        <div>
-                                            Message Sent
-                                        </div>
-                                    <Link to='/'>Go to Homepage</Link>
-                                </div>  
+                                    <IoIcons.IoMdPaperPlane />
+                                    <div>
+                                        Message Sent
+                                    </div>
+                                    <Link  className="contact-form__message__validation__send__button" to='/'>Go to Homepage</Link>
+                                </div> 
                             }
                             {showError &&
                                 <div className="contact-form__message__validation__error">
