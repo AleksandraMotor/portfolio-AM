@@ -6,7 +6,7 @@ import './ButtonGoBack.scss';
 const ButtonGoBack: React.FC= () => {
 
     return (
-        <Link  className="go-back" to='/'>Go Back</Link>
+        <Link  className="go-back" to='/portfolio-AM/'>Go Back</Link>
     );
 };
 
