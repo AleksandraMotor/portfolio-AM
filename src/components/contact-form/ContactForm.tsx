@@ -3,13 +3,8 @@ import emailjs from '@emailjs/browser';
 import { useForm } from 'react-hook-form';
 import * as IoIcons from 'react-icons/io';
 import * as GiIcons from 'react-icons/gi';
-import * as BsIcons from 'react-icons/bs';
 import * as HiIcons from 'react-icons/hi2';
-import * as AiIcons from 'react-icons/ai';
-import * as TfiIcons from 'react-icons/tfi';
-import * as RxIcons from 'react-icons/rx';
 import * as BiIcons from 'react-icons/bi'
-import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import ButtonGoBack from '../buttons/button-go-back/ButtonGoBack';
 
@@ -53,9 +48,9 @@ const ContactForm: React.FC = () => {
         });
     };
     
-    console.log("showMessage", showMessage);
-    console.log("showSucess", showSucess);
-    console.log("showError", showError);
+    // console.log("showMessage", showMessage);
+    // console.log("showSucess", showSucess);
+    // console.log("showError", showError);
 
     return (
         <div className="contact-form">
@@ -118,43 +113,42 @@ const ContactForm: React.FC = () => {
                     'contact-form__message': true,
                     'contact-form__message--hide': !showMessage,
                 })}
-                >
-                    
-                        <div className="contact-form__message__validation">
-                            <div
-                                id='checking'
-                                className="contact-form__message__validation__checking"
-                            >
-                                Checking
-                                <HiIcons.HiOutlineArrowPath/>
+            >
+                <div className="contact-form__message__validation">
+                    <div
+                        id='checking'
+                        className="contact-form__message__validation__checking"
+                    >
+                        Checking
+                        <HiIcons.HiOutlineArrowPath/>
+                    </div>
+                    {!showSucess && !showError &&
+                        <div className="contact-form__message__validation__info">
+                            Form Validation
+                            <span>Check your contact form for validation requirement messages like "Email is required..." or " "Username is to short/long"</span>
+                            <button onClick={showInfo}>Return to the contact form<GiIcons.GiLobArrow/></button>   
+                        </div>                             
+                    }
+                    {showSucess &&
+                        <div className="contact-form__message__validation__send">
+                            <IoIcons.IoMdPaperPlane />
+                            <div>
+                                Message Sent
                             </div>
-                            {!showSucess && !showError &&
-                                <div className="contact-form__message__validation__info">
-                                    Form Validation
-                                    <span>Check your contact form for validation requirement messages like "Email is required..." or " "Username is to short/long"</span>
-                                    <button onClick={showInfo}>Return to the contact form<GiIcons.GiLobArrow/></button>   
-                                </div>                             
-                            }
-                            {showSucess &&
-                                <div className="contact-form__message__validation__send">
-                                    <IoIcons.IoMdPaperPlane />
-                                    <div>
-                                        Message Sent
-                                    </div>
-                                    <ButtonGoBack/>
-                                </div>  
-                            }
-                            {showError &&
-                                <div className="contact-form__message__validation__error">
-                                    <div className="contact-form__message__validation__error__text">
-                                        <BiIcons.BiMessageSquareError/>
-                                        Error
-                                    </div>
-                                    <ButtonGoBack/> 
-                                </div> 
-                            }  
-                        </div>                    
-                </div>                        
+                            <ButtonGoBack/>
+                        </div>  
+                    }
+                    {showError &&
+                        <div className="contact-form__message__validation__error">
+                            <div className="contact-form__message__validation__error__text">
+                                <BiIcons.BiMessageSquareError/>
+                                Error
+                            </div>
+                            <ButtonGoBack/> 
+                        </div> 
+                    }  
+                </div>                    
+            </div>                        
         </div>
     );
 };
