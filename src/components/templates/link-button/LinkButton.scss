@@ -8,7 +8,7 @@
     padding: toRem(5);
     border: toRem(2) solid;
     border-radius: toRem(4);
-    color: $color_secondary;
+    color: $bg_color;
 
     &:hover {
         color: $color_light;

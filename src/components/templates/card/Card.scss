@@ -41,29 +41,22 @@
         }
 
         &__bottom {
-            height: toRem(100);
+            max-height: toRem(100);
+            min-height: toRem(100);
             display: flex;
             align-items: center;
-            justify-content: flex-end;
-            padding: toRem(15);
+            justify-content: space-between;
+            padding: toRem(5) toRem(10);
             border-bottom-left-radius: toRem(8);
             border-bottom-right-radius: toRem(8);
-            background-image: linear-gradient(
-                to top,
-                rgba(0, 0, 0, 1) 0%,
-                rgba(0,0,0,0.95) 25%,
-                rgba(0,0,0,0.8) 50%, 
-                rgba(0,0,0,0.6) 75%,
-                rgba(0, 0, 0, 0.3) 100%
-            );
+            color: $bg_color;
+            background-image: $bg_gradient;
+            font-size: toRem(20);
+            font-weight: 500;
 
             &__title {
-                flex-grow: 1;
                 text-transform: uppercase;
-                
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
+                max-width: 15ch;
             }
         }
     }
@@ -78,25 +71,16 @@
         flex-direction: column;        
         border-radius: toRem(8);
         padding: toRem(15);
-        opacity: 0.7;
+        overflow: hidden;
+        background-color: $bg_color;
         box-shadow: inset 0px 0px 10px 2px $color_light;
-        background-image: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 1) 0%,
-            rgba(0,0,0,0.95) 25%,
-            rgba(0,0,0,0.8) 50%, 
-            rgba(0,0,0,0.6) 75%,
-            rgba(0, 0, 0, 0.3) 100%
-        );
 
         &__top {
             border-radius: toRem(8);
             margin: toRem(15) toRem(5);
             display: flex;
             align-items: center;
-            height: toRem(50);
-            overflow: hidden;
-
+            height: toRem(35);
 
             &__title {
                 text-transform: uppercase;
@@ -108,13 +92,22 @@
 
         &__technologies {
             display: flex;
-            background-color: $color_primary;
+            background-image: $bg_gradient;
             border-radius: toRem(8);
+
+            a {
+               text-decoration: none;
+               flex-wrap: wrap;
+               max-width: toRem(40);
+            }
         }
 
         &__description {
             margin: toRem(15) toRem(15);
             font-size: toRem(15);
+            height: toRem(120);
+            width: toRem(240);
+
         }
     }
 }

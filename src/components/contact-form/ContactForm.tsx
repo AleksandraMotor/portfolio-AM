@@ -6,7 +6,7 @@ import * as GiIcons from 'react-icons/gi';
 import * as HiIcons from 'react-icons/hi2';
 import * as BiIcons from 'react-icons/bi'
 import classNames from 'classnames';
-import ButtonGoBack from '../buttons/button-go-back/ButtonGoBack';
+import ButtonGoBack from '../links/button-go-back/ButtonGoBack';
 
 import './ContactForm.scss';
 
