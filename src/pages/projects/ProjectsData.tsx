@@ -15,13 +15,12 @@ export const ProjectsData = [
         technologies: [
             <SiIcons.SiReact/>,
             <SiIcons.SiTypescript/>,
-            // <SiIcons.SiHtml5/>,
             <SiIcons.SiSass/>,
             <SiIcons.SiWebpack/>,
             <SiIcons.SiBabel/>
         ],
         description: 
-            `My portfolio project contains interactive cards with descriptions of my projects, 
+            `My portfolio website contains interactive cards with descriptions of my projects, 
             a list of my skills in the form of animated buttons, and an interactive contact form.`
     },
     {
@@ -42,29 +41,19 @@ export const ProjectsData = [
             Your favorite breeds will stay next to the display for more convenient switching. 
             Cute doggos available on every device!`
     },
-    // {
-    //     name: 'Animated Hamburgers',
-    //     source: 'https://github.com/AleksandraMotor/animatedHamburgers',
-    //     live_demo: 'https://aleksandramotor.github.io/animatedHamburgers/',
-    //     thumbnail: animatedHamburgers,
-    //     technologies: [
-    //         <SiIcons.SiHtml5/>,
-    //         <SiIcons.SiCss3/>,
-    //         <SiIcons.SiJavascript/>
-    //     ],
-    //     description: 'My first project while learning CSS. The website contains various animated buttons, mostly of the Hamburger menu type.'
-    // },
     {
-        name: 'Photogallery',
-        source: 'https://github.com/AleksandraMotor/photogallery',
-        live_demo: 'https://aleksandramotor.github.io/photogallery',
-        thumbnail: photogallery,
+        name: 'Design Samples Scroller',
+        // source: 'https://github.com/AleksandraMotor/css-design-samples',
+        // live_demo: 'https://aleksandramotor.github.io/photogallery',
+        thumbnail: designSamplesScroller,
         technologies: [
+            <SiIcons.SiJavascript/>,
             <SiIcons.SiHtml5/>,
-            <SiIcons.SiCss3/>,
-            <SiIcons.SiJavascript/>
+            <SiIcons.SiSass/>,
+            <SiIcons.SiWebpack/>,
+            <SiIcons.SiBabel/>,
         ],
-        description: 'Responsive photo gallery using the lightbox library.'
+        description: 'Scrolling app containing ideas for widgets, banners, carousels, product cards, buttons, etc., that I haven\'t had the opportunity to use in previous projects.'
     },
     {
         name: 'Weather App',
@@ -93,18 +82,16 @@ export const ProjectsData = [
             Using the "Builder" design pattern, we created an application that allows you to build a rocket tailored to your individual needs.`
     },
     {
-        name: 'Design Samples Scroller',
-        // source: 'https://github.com/AleksandraMotor/css-design-samples',
-        // live_demo: 'https://aleksandramotor.github.io/photogallery',
-        thumbnail: designSamplesScroller,
+        name: 'Photogallery',
+        source: 'https://github.com/AleksandraMotor/photogallery',
+        live_demo: 'https://aleksandramotor.github.io/photogallery',
+        thumbnail: photogallery,
         technologies: [
-            <SiIcons.SiJavascript/>,
             <SiIcons.SiHtml5/>,
-            <SiIcons.SiSass/>,
-            <SiIcons.SiWebpack/>,
-            <SiIcons.SiBabel/>,
+            <SiIcons.SiCss3/>,
+            <SiIcons.SiJavascript/>
         ],
-        description: 'Scrolling app containing ideas for widgets, banners, carousels, product cards, buttons, etc., that I haven\'t had the opportunity to use in previous projects.'
+        description: 'Responsive photo gallery using the lightbox library.'
     },
     // {
     //     name: 'Plan Shop Chloris',
@@ -119,5 +106,18 @@ export const ProjectsData = [
     //         <SiIcons.SiAngular/>
     //     ],
     //     description: 'Online plant store. Noteworthy is the extended menu with space for advertising, convenient sorting of products, a list of favorite products and a detailed product card.'
-    // }
+    // },
+
+    // {
+    //     name: 'Animated Hamburgers',
+    //     source: 'https://github.com/AleksandraMotor/animatedHamburgers',
+    //     live_demo: 'https://aleksandramotor.github.io/animatedHamburgers/',
+    //     thumbnail: animatedHamburgers,
+    //     technologies: [
+    //         <SiIcons.SiHtml5/>,
+    //         <SiIcons.SiCss3/>,
+    //         <SiIcons.SiJavascript/>
+    //     ],
+    //     description: 'My first project while learning CSS. The website contains various animated buttons, mostly of the Hamburger menu type.'
+    // },
 ];

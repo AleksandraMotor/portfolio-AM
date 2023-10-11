@@ -13,7 +13,9 @@
     & > * {
         width: toRem(200);
         height: toRem(200);
-        border: 2px solid $color_primary;
+        border: 1px solid $color_primary;
+        box-shadow: inset 0px 0px 10px 0px $color_secondary;
+        border-radius: toRem(8);
         margin: toRem(20);
         padding: toRem(10);
         display: flex;
