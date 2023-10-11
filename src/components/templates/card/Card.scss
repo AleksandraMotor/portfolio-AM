@@ -73,7 +73,7 @@
         padding: toRem(15);
         overflow: hidden;
         background-color: $bg_color;
-        opacity: 0.8;
+        box-shadow: inset 0px 0px 8px 0px $color_light;
 
         &__top {
             border-radius: toRem(8);
