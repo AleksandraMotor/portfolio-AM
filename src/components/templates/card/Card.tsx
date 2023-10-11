@@ -29,8 +29,7 @@ const Card: React.FC<CardProps> = ({ name, source, live_demo, thumbnail, technol
                 'card--active': !reverse,
             })}
         >
-            <div 
-                className='card__front'>
+            <div className='card__front'>
                 <div
                     style={{backgroundImage: thumbnail ? `url(${thumbnail})`: `linear-gradient(red, blue)`}}
                     className='card__front__main'>

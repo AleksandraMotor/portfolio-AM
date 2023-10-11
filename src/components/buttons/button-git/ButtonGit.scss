@@ -21,6 +21,22 @@
         border-radius: toRem(8);
         transition: 0.5s linear;
         cursor: pointer;
+        
+        &:hover, &:focus, &:active {
+            width: toRem(120);
+            background-color: $color_light;
+            color: $bg_color;  
+            box-shadow: 0px 0px 10px 3px $color_light;             
+        }
+
+        &:hover &__icon, &:focus &__icon, &:active &__icon {
+            font-size: toRem(80);
+            transform: translateY(50%);
+        }
+
+        &:hover &__description, &:focus &__description, &:active &__description {
+            top: calc(50% - 30px);
+        }
 
         &__icon {
             font-size: toRem(60);
@@ -35,21 +51,5 @@
             font-size: toRem(30);
             transition: 0.6s ease-in-out;
         }
-
-        &:hover, &:focus, &:active {
-            width: toRem(120);
-            background-color: $color_light;
-            color: $bg_color;  
-            box-shadow: 0px 0px 10px 3px $color_light;      
-        }
-
-        &:hover &__icon {
-            font-size: toRem(80);
-            transform: translateY(50%);
-        }
-
-        &:hover &__description {
-            top: calc(50% - 30px);
-        }
-    }   
+    }
 }
