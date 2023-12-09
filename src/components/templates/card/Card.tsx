@@ -57,9 +57,9 @@ const Card: React.FC<CardProps> = ({ name, source, live_demo, thumbnail, technol
                 <div className='card__back__technologies'>
                     {technologies?.map((button, index) => {
                         return (
-                            <LinkButton key={index} link={"/skills"}>
+                            <div className='card__back__technologies__button' key={index}>
                                 {button}
-                            </LinkButton>
+                            </div>
                         )
                     })}
                 </div>
@@ -69,7 +69,6 @@ const Card: React.FC<CardProps> = ({ name, source, live_demo, thumbnail, technol
             </div>
         </div>
     );
-
 };
 
 export default Card;

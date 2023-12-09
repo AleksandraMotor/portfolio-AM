@@ -1,9 +1,9 @@
-import designSamplesScroller from '../../assets/thumbnails/designSamplesScroller.png';
 import portfolio from '../../assets/thumbnails/portfolioAM.png';
-import photogallery from '../../assets/thumbnails/photogallery.png';
-import weatherApp from '../../assets/thumbnails/weatherApp.jpg';
-import spaceRocket from '../../assets/thumbnails/spaceRocket.png';
 import doggoBrowser from '../../assets/thumbnails/doggoBrowser.png';
+import javaScriptSamples from '../../assets/thumbnails/javaScriptSamples.png';
+import weatherApp from '../../assets/thumbnails/weatherApp.png';
+import giarddesign from '../../assets/thumbnails/giarddesign.png';
+import spaceRocket from '../../assets/thumbnails/spaceRocket.png';
 import * as SiIcons from 'react-icons/si';
 
 export const ProjectsData = [
@@ -21,7 +21,7 @@ export const ProjectsData = [
         ],
         description: 
             `My portfolio website contains interactive cards with descriptions of my projects, 
-            a list of my skills in the form of animated buttons, and an interactive contact form.`
+            a list of my skills in the form of animated buttons, and an interactive contact form made using EmailJS.`
     },
     {
         name: 'Doggo Browser',
@@ -42,10 +42,10 @@ export const ProjectsData = [
             Cute doggos available on every device!`
     },
     {
-        name: 'Design Samples Scroller',
-        // source: 'https://github.com/AleksandraMotor/css-design-samples',
-        // live_demo: 'https://aleksandramotor.github.io/photogallery',
-        thumbnail: designSamplesScroller,
+        name: 'JavaScript Samples',
+        source: 'https://github.com/AleksandraMotor/JavaScript-Samples',
+        live_demo: 'https://aleksandramotor.github.io/JavaScript-Samples/',
+        thumbnail: javaScriptSamples,
         technologies: [
             <SiIcons.SiJavascript/>,
             <SiIcons.SiHtml5/>,
@@ -53,12 +53,22 @@ export const ProjectsData = [
             <SiIcons.SiWebpack/>,
             <SiIcons.SiBabel/>,
         ],
-        description: 'Scrolling app containing ideas for widgets, banners, carousels, product cards, buttons, etc., that I haven\'t had the opportunity to use in previous projects.'
+        description: 'JavaScript Samples is a collection of ideas for widgets, banners, carousels, product cards, buttons and many more.'
+    },
+    {
+        name: 'Giard Design',
+        source: 'https://github.com/AleksandraMotor/zadanie_rekrutacyjne_2023',
+        live_demo: 'https://aleksandramotor.github.io/zadanie_rekrutacyjne_2023/',
+        thumbnail: giarddesign,
+        technologies: [
+            <SiIcons.SiHtml5/>,
+            <SiIcons.SiCss3/>,
+            <SiIcons.SiTailwindcss/>,
+        ],
+        description: 'Giard Design project is an exemplary website for a garden design company based on a mock-up provided by adRespect.pl agency.'
     },
     {
         name: 'Weather App',
-        // source: 'https://github.com/AleksandraMotor/weather-app',
-        // live_demo: 'https://aleksandramotor.github.io/photogallery',
         thumbnail: weatherApp,
         technologies: [
             <SiIcons.SiHtml5/>,
@@ -67,12 +77,11 @@ export const ProjectsData = [
             <SiIcons.SiReact/>,
             <div style={{fontSize: '10px', fontWeight: '600'}}>REST API</div>
         ],
-        description: 'A simple weather app with an eye-catching layout.'
+        description: 'A simple weather app containing all the information one may need. Currently in the process of changing layout.'
     },
     {
         name: 'space Rocket',
         source: 'https://github.com/AleksandraMotor/spaceRocket',
-        // live_demo: 'https://aleksandramotor.github.io/photogallery',
         thumbnail: spaceRocket,
         technologies: [
             <SiIcons.SiCplusplus/>
@@ -81,43 +90,4 @@ export const ProjectsData = [
             `The "rock&Rockets" program creates rockets from scratch. 
             Using the "Builder" design pattern, we created an application that allows you to build a rocket tailored to your individual needs.`
     },
-    {
-        name: 'Photogallery',
-        source: 'https://github.com/AleksandraMotor/photogallery',
-        live_demo: 'https://aleksandramotor.github.io/photogallery',
-        thumbnail: photogallery,
-        technologies: [
-            <SiIcons.SiHtml5/>,
-            <SiIcons.SiCss3/>,
-            <SiIcons.SiJavascript/>
-        ],
-        description: 'Responsive photo gallery using the lightbox library.'
-    },
-    // {
-    //     name: 'Plan Shop Chloris',
-    //     // source: 'https://github.com/AleksandraMotor/css-design-samples',
-    //     // live_demo: 'https://aleksandramotor.github.io/photogallery',
-    //     // thumbnail: spaceRocket,
-    //     technologies: [
-    //         <SiIcons.SiHtml5/>,
-    //         <SiIcons.SiCss3/>,
-    //         <SiIcons.SiJavascript/>,
-    //         <SiIcons.SiTypescript/>,
-    //         <SiIcons.SiAngular/>
-    //     ],
-    //     description: 'Online plant store. Noteworthy is the extended menu with space for advertising, convenient sorting of products, a list of favorite products and a detailed product card.'
-    // },
-
-    // {
-    //     name: 'Animated Hamburgers',
-    //     source: 'https://github.com/AleksandraMotor/animatedHamburgers',
-    //     live_demo: 'https://aleksandramotor.github.io/animatedHamburgers/',
-    //     thumbnail: animatedHamburgers,
-    //     technologies: [
-    //         <SiIcons.SiHtml5/>,
-    //         <SiIcons.SiCss3/>,
-    //         <SiIcons.SiJavascript/>
-    //     ],
-    //     description: 'My first project while learning CSS. The website contains various animated buttons, mostly of the Hamburger menu type.'
-    // },
 ];
