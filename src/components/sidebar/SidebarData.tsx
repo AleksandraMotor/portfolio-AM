@@ -7,26 +7,22 @@ import { TbCategory2 } from "react-icons/tb";
 export const SidebarData = [
     {
         title: 'Home',
-        // path: '/portfolio-AM/',
-        path: '/',
+        path: '/portfolio-AM/',
         icon: <FaIcons.FaHome/>
     },
     {
         title: 'Skills',
-        // path: '/portfolio-AM/skills',
-        path: '/skills',
+        path: '/portfolio-AM/skills',
         icon: <GiIcons.GiSkills/>
     },
     {
         title: 'Projects',
-        // path: '/portfolio-AM/projects',
-        path: '/projects',
+        path: '/portfolio-AM/projects',
         icon: <VscFileSubmodule/>
     },
     {
         title: 'Contact',
-        // path: '/portfolio-AM/contact',
-        path: '/contact',
+        path: '/portfolio-AM/contact',
         icon: <TbCategory2/>
     }
 ];
