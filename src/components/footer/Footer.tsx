@@ -9,10 +9,10 @@ const Footer: React.FunctionComponent = () => {
 
     return (
         <div className="footer">
-                <a href="https://github.com/AleksandraMotor">
+                <a href="https://github.com/AleksandraMotor" target="_blank">
                     <SiIcons.SiGithub/>
                 </a>
-                <a href="https://www.linkedin.com/in/aleksandramotor/">
+                <a href="https://www.linkedin.com/in/aleksandramotor/" target="_blank">
                     <SiIcons.SiLinkedin/>
                 </a>
                 <Link to='/portfolio-AM/contact'>

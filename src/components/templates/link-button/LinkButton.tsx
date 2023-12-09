@@ -12,7 +12,8 @@ const LinkButton: React.FC<LinkButtonProps> = ({ link , children}) => {
     return (
         <Link
             className="link"
-            to={link}    
+            to={link}
+            target="_blank"
         >
             {children}
         </Link>
